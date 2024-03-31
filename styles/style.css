@@ -26,7 +26,8 @@
   font-family: var(--accent-font, fantasy);
   background-color: var(--background-color);
   border: var(--border);
-  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem) 25px;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem)
+    clamp(0.875rem, -1.4688rem + 10vw, 7.53125rem) 25px;
   text-transform: uppercase;
 }
 
@@ -40,7 +41,6 @@
   outline: none;
 }
 
-.header__logo:focus-visible,
 .header__logo:hover {
   opacity: 0.6;
 }
@@ -152,15 +152,16 @@
   font-size: var(--minor-font-size);
   opacity: 0.5;
   mix-blend-mode: hard-light;
-  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color), 1px 0 var(--background-color), 0 -1px var(--background-color);
+  text-shadow: -1px 0 var(--background-color), 0 1px var(--background-color),
+    1px 0 var(--background-color), 0 -1px var(--background-color);
   z-index: 2;
 }
 
 @supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .card__label {
-      -webkit-text-stroke: 1px var(--background-color);
-      text-stroke: 1px var(--background-color);
-      text-shadow: none;
+    -webkit-text-stroke: 1px var(--background-color);
+    text-stroke: 1px var(--background-color);
+    text-shadow: none;
   }
 }
 
@@ -180,19 +181,21 @@
   filter: saturate(200%);
 }
 
-.card__image-concentration {
+.card__image-diligence {
   filter: grayscale(1);
 }
 
-.card__image-works-hard {
+.card__image-concentration {
   filter: hue-rotate(-90deg) contrast(2) brightness(200%);
 }
 
-.card__image-cool-programmer {
+.card__image-result {
   filter: contrast(200%);
 }
 
 .card__image {
+  object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   outline: var(--border);
   vertical-align: bottom;
@@ -344,16 +347,16 @@
 
 @media (width < 376px) {
   .main__button-save {
-      max-inline-size: 310px;
+    max-inline-size: 310px;
   }
 
   .main__diskette-icon {
-      inline-size: 28px;
+    inline-size: 28px;
   }
 
   .modal[open] {
-      outline: var(--border);
-      border: none;
-      padding: 30px 40px;
+    outline: var(--border);
+    border: none;
+    padding: 30px 40px;
   }
 }
